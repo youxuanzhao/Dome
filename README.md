@@ -1,79 +1,87 @@
 # DOME
-
-## TO-DO LIST
-
-### Stage 1: Basics
+## Milestone 1: Basics
 
 - [x] Basic Movement
 - [x] Basic Jumping
 - [x] Basic Cloak Animations
+- [x] Basic Tilesets
+
+- [ ] Specialized Jump Key Design Choice?
+- [ ] Concept Art/Tileset Aesthetic 
+- [ ] Enemy AI 1: Dummy
+- [ ] Basic Hit & Death System
+- [ ] README.md: Introduction Oneliner, Installation
+
 - [ ] Basic Body Animations
 - [ ] Basic Arm Animations
 - [ ] Basic Collectables
-- [x] Basic Tilesets
-- [ ] Basic Enemy
+- [ ] Enemy Skin
 - [ ] Basic Combat System (Melee)
 - [ ] Basic Combat Animations
-- [ ] Basic Hit & Death System
-- [ ] Basic Enemy AI
 - [ ] Basic UI
 - [ ] Basic Map Design
 
-### Stage 2: Level 1 & Home Screen
+## Milestone 2: 1st Iteration
 
-- [ ] Level 1 Tileset
-- [ ] Level 1 Background
-- [ ] Level 1 Map Design
-- [ ] Level 1 Story Text
-- [ ] Level 1 Cutscene
-- [ ] Home Screen UI
-- [ ] Home Screen Background
-- [ ] Level Switching
-- [ ] Settings' Functions
+- [ ] Level 1
+    - [ ] Tileset
+    - [ ] Background
+    - [ ] Map Design
+    - [ ] Story Text
 
+- [ ] Actions
+- [ ] Godmode
+- [ ] Essential Playtesting
 
+## Milestone 3: More Levels
 
-### Stage 3: Level 2 to 5
+- [ ] Level 2
+    - [ ] Tileset
+    - [ ] Background
+    - [ ] Map Design
+    - [ ] Story Text
 
-- [ ] Level 2 Tileset
-- [ ] Level 2 Background
-- [ ] Level 2 Map Design
-- [ ] Level 2 Story Text
-- [ ] Level 2 Cutscene
+- [ ] Level 3
+    - [ ] Tileset
+    - [ ] Background
+    - [ ] Map Design
+    - [ ] Story Text
 
-- [ ] Level 3 Tileset
-- [ ] Level 3 Background
-- [ ] Level 3 Map Design
-- [ ] Level 3 Story Text
-- [ ] Level 3 Cutscene
+- [ ] Level 4
+    - [ ] Tileset
+    - [ ] Background
+    - [ ] Map Design
+    - [ ] Story Text
 
-- [ ] Level 4 Tileset
-- [ ] Level 4 Background
-- [ ] Level 4 Map Design
-- [ ] Level 4 Story Text
-- [ ] Level 4 Cutscene
+- [ ] Level 5
+    - [ ] Tileset
+    - [ ] Background
+    - [ ] Map Design
+    - [ ] Story Text
 
-- [ ] Level 5 Tileset
-- [ ] Level 5 Background
-- [ ] Level 5 Map Design
-- [ ] Level 5 Story Text
-- [ ] Level 5 Cutscene
+- [ ] Level 0/Lobby/Tutorial
+    - [ ] Tileset
+    - [ ] Background
+    - [ ] Map Design
+    - [ ] Story Text
 
+## Milestone 4: Action Experience
 
+- [ ] Smoother Actions
+- [ ] Skills
+- [ ] Aim Sights
+- [ ] More Melee Weapons
+- [ ] Ranged Weapons
 
-### Stage 3: Relics & Lobby
+## Milestone 5: Relics & Lobby
 
-- [ ] Lobby Tileset
-- [ ] Lobby Map Design
 - [ ] Lobby Permanent Upgrades
 - [ ] Relics Design
 - [ ] Relics System
 - [ ] Player Stats Overhaul
 - [ ] Currency System
 
-
-
-### Stage 4: Visual Redesign & Sound Effects
+## Milestone 6: Visual Redesign & Sound Effects
 
 - [ ] Filter
 - [ ] Particle Effects
@@ -81,42 +89,29 @@
 - [ ] UI Redesign (If necessary)
 - [ ] Animations Remake
 
+## Milestone 7: Finish Up
 
+- [ ] Variants
+    - [ ] Weapon
+    - [ ] Critters
+    - [ ] Biome - Visual Filter?
+    - [ ] Map
+    - [ ] Random Generating System
 
-### Stage 5: Action Experience
-
-- [ ] More Actions
-- [ ] Smoother Actions
-- [ ] Skills
-- [ ] Aim Sights
-- [ ] More Melee Weapons
-- [ ] Ranged Weapons
-
-
-
-### Stage 6: Variants
-
-- [ ] Weapon Variants
-- [ ] Creature Variants
-- [ ] Biome (Filter) Variants
-- [ ] Map Variants
-- [ ] Random Generating System
-
-
-
-### Stage 7: Beta Version Launched
+- [ ] Cutscene
+    - [ ] Level 1
+    - [ ] Level 2
+    - [ ] Level 3
+    - [ ] Level 4
+    - [ ] Level 5    
+- [ ] Home Screen UI
+- [ ] Home Screen Background
+- [ ] Level Switching
+- [ ] Settings
 
 - [ ] Private Github Repository
-
 - [ ] Testing All Contents & Fix Bugs
-
 - [ ] Open All Defined Contents
-
-- [ ] Build (Target Platform: Windows, Mac and Linux)
-
+- [ ] Build (Target Platform: Windows, Mac, and Web)
+- [ ] Controller Test
 - [ ] Launch Steam & Wait for Comments
-
-  
-
----
-
