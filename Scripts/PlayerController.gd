@@ -56,6 +56,8 @@ func _physics_process(delta):
 		Motion.y = -JumpForce;
 	if Motion.y > 0 and !(is_on_floor()):
 		$Cloak/CloakAnimation.play("Falling");
+		$Arm/ArmAnimation.play("Falling");
+		#$Body/BodyAnimation.play("Falling");
 	else:
 		$Cloak/CloakAnimation.play("CloakIdle");
 	if is_on_floor():
