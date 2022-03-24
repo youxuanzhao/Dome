@@ -6,14 +6,14 @@
 - [x] Basic Cloak Animations
 - [x] Basic Tilesets
 
-- [ ] Specialized Jump Key Design Choice?
+- [x] Specialized Jump Key Design Choice?
 - [ ] Concept Art/Tileset Aesthetic 
 - [ ] Enemy AI 1: Dummy
 - [ ] Basic Hit & Death System
 - [ ] README.md: Introduction Oneliner, Installation
 
-- [ ] Basic Body Animations
-- [ ] Basic Arm Animations
+- [x] Basic Body Animations
+- [x] Basic Arm Animations
 - [ ] Basic Collectables
 - [ ] Enemy Skin
 - [ ] Basic Combat System (Melee)
