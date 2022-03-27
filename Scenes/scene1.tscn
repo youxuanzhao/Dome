@@ -1,6 +1,6 @@
-[gd_scene load_steps=28 format=2]
+[gd_scene load_steps=36 format=2]
 
-[ext_resource path="res://Scenes/Gem.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/Gem.gd" type="Script" id=1]
 [ext_resource path="res://Assets/tileset01.png" type="Texture" id=2]
 [ext_resource path="res://Assets/Player-Sheet.png" type="Texture" id=3]
 [ext_resource path="res://Assets/PlayerArm-Sheet.png" type="Texture" id=4]
@@ -9,6 +9,11 @@
 [ext_resource path="res://Assets/Slime-Sheet.png" type="Texture" id=7]
 [ext_resource path="res://Scripts/Slime.gd" type="Script" id=8]
 [ext_resource path="res://Assets/Gem.png" type="Texture" id=9]
+[ext_resource path="res://Scripts/Arm.gd" type="Script" id=10]
+[ext_resource path="res://Assets/aim-Sheet.png" type="Texture" id=11]
+[ext_resource path="res://Scripts/Aim.gd" type="Script" id=12]
+[ext_resource path="res://Assets/melee-attack-Sheet.png" type="Texture" id=13]
+[ext_resource path="res://Scripts/Melee.gd" type="Script" id=14]
 
 [sub_resource type="Animation" id=6]
 resource_name = "BodyRunning"
@@ -165,6 +170,53 @@ tracks/0/keys = {
 "values": [ 0 ]
 }
 
+[sub_resource type="Animation" id=22]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=23]
+resource_name = "slash"
+length = 0.24
+step = 0.02
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.04, 0.08, 0.14, 0.18 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.24 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+
+[sub_resource type="RectangleShape2D" id=24]
+extents = Vector2( 8, 10 )
+
 [sub_resource type="TileSet" id=2]
 0/name = "tileset01.png 0"
 0/texture = ExtResource( 2 )
@@ -312,9 +364,6 @@ tracks/0/keys = {
 [node name="Player" type="KinematicBody2D" parent="."]
 position = Vector2( 48, 24 )
 script = ExtResource( 6 )
-__meta__ = {
-"_edit_group_": true
-}
 
 [node name="Body" type="Sprite" parent="Player"]
 texture = ExtResource( 3 )
@@ -334,6 +383,7 @@ shape = SubResource( 1 )
 [node name="Arm" type="Sprite" parent="Player"]
 texture = ExtResource( 4 )
 hframes = 4
+script = ExtResource( 10 )
 
 [node name="ArmAnimation" type="AnimationPlayer" parent="Player/Arm"]
 anims/ArmRunning = SubResource( 8 )
@@ -354,7 +404,27 @@ anims/RESET = SubResource( 4 )
 
 [node name="PlayerView" type="Camera2D" parent="Player"]
 current = true
-zoom = Vector2( 2, 2 )
+
+[node name="Area2D" type="Area2D" parent="Player"]
+rotation = -3.14159
+script = ExtResource( 14 )
+
+[node name="Melee" type="Node2D" parent="Player/Area2D"]
+
+[node name="Sprite" type="Sprite" parent="Player/Area2D/Melee"]
+position = Vector2( 12, -2 )
+rotation = 0.509636
+z_index = 1
+texture = ExtResource( 13 )
+hframes = 5
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Player/Area2D/Melee"]
+anims/RESET = SubResource( 22 )
+anims/slash = SubResource( 23 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/Area2D"]
+position = Vector2( 12, 0 )
+shape = SubResource( 24 )
 
 [node name="Map" type="StaticBody2D" parent="."]
 
@@ -371,6 +441,7 @@ polygon = PoolVector2Array( -8, -10, -64, -10, -64, 246, -80, 246, -80, 262, 880
 
 [node name="Slime" type="KinematicBody2D" parent="."]
 position = Vector2( 128, 32 )
+scale = Vector2( 0.5, 0.5 )
 script = ExtResource( 8 )
 __meta__ = {
 "_edit_group_": true
@@ -405,5 +476,17 @@ shape = SubResource( 19 )
 [node name="AnimationPlayer" type="AnimationPlayer" parent="GemParent/Gem"]
 anims/Idle = SubResource( 20 )
 anims/RESET = SubResource( 21 )
+
+[node name="Aim" type="Node2D" parent="."]
+script = ExtResource( 12 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Aim"]
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 11 )
+hframes = 2
+frame = 1
 
 [connection signal="body_entered" from="GemParent/Gem" to="GemParent/Gem" method="_on_Gem_body_entered"]

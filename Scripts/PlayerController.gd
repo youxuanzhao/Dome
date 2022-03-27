@@ -23,10 +23,14 @@ func _physics_process(delta):
 		$Body.scale.x=1;
 		$Arm.scale.x=1;
 		$Cloak.scale.x=1;
+		$Area2D/Melee.scale.y=1;
+		$Area2D.rotation_degrees = 0;
 	elif !(facing_right):
 		$Body.scale.x=-1;
 		$Arm.scale.x=-1;
 		$Cloak.scale.x=-1;
+		$Area2D/Melee.scale.y=-1;
+		$Area2D.rotation_degrees = 180;
 	if Motion.y > MaxFallSpeed:
 		Motion.y = MaxFallSpeed;
 	if Motion.x > PMaxSpeed:

@@ -8,7 +8,7 @@
 
 - [x] Specialized Jump Key Design Choice?
 - [ ] Concept Art/Tileset Aesthetic 
-- [ ] Enemy AI 1: Dummy
+- [x] Enemy AI 1: Dummy
 - [ ] Basic Hit & Death System
 - [ ] README.md: Introduction Oneliner, Installation
 
