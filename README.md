@@ -3,17 +3,14 @@
 
 - [x] Basic Movement
 - [x] Basic Jumping
-- [x] Basic Cloak Animations
-- [x] Basic Tilesets
+- [ ] Basic Tilesets
 
 - [x] Specialized Jump Key Design Choice?
 - [ ] Concept Art/Tileset Aesthetic 
-- [x] Enemy AI 1: Dummy
+- [ ] Enemy AI 1: Dummy
 - [ ] Basic Hit & Death System
 - [ ] README.md: Introduction Oneliner, Installation
 
-- [x] Basic Body Animations
-- [x] Basic Arm Animations
 - [ ] Basic Collectables
 - [ ] Enemy Skin
 - [ ] Basic Combat System (Melee)

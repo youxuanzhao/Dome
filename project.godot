@@ -73,6 +73,7 @@ ui_restart={
 [physics]
 
 common/enable_pause_aware_picking=true
+2d/cell_size=64
 
 [rendering]
 
