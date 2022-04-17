@@ -6,7 +6,7 @@ const MAX_FALLSPEED = 200
 const PMAX_SPEED = 80
 const NMAX_SPEED = -80
 const SPEED_FX = 50
-const JUMPFORCE = -500
+const JUMPFORCE = -600
 const ACCELERATION = 50
 
 var Status = 0
