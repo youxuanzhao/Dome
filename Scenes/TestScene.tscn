@@ -2,14 +2,19 @@
 
 [ext_resource path="res://Modules/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Modules/Object.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Modules/Tilemap.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Modules/Floor.tscn" type="PackedScene" id=3]
 
-[node name="Terrain" type="Node2D"]
-
-[node name="Tilemap" parent="." instance=ExtResource( 3 )]
+[node name="Terrain" type="YSort"]
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
+z_index = 1
+MAX_SPEED = 100
+FRICTION = 150
+ACCELERATION = 30
 
 [node name="Object" parent="." instance=ExtResource( 2 )]
-position = Vector2( 88, 16 )
+position = Vector2( 80, -12 )
+z_index = 1
 ScaleFactor = 2
+
+[node name="Floor" parent="." instance=ExtResource( 3 )]
