@@ -1,7 +1,7 @@
 # gitignore
 Dome.exe
 Dome.pck
-import/
+import
 *.DS_Store
 *.import
 *.aseprite
