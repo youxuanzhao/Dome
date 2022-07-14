@@ -2,5 +2,5 @@
 Dome.exe
 Dome.pck
 .DS_Store
-.import/
-.aseprite/
+Assets/.import/
+Assets/.aseprite/
