@@ -15,6 +15,5 @@ ACCELERATION = 30
 [node name="Object" parent="." instance=ExtResource( 2 )]
 position = Vector2( 80, -12 )
 z_index = 1
-ScaleFactor = 2
 
 [node name="Floor" parent="." instance=ExtResource( 3 )]
